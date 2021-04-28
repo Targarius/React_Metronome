@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+.metronome_component{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #FF9029;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.metronome_title{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.metronome_container{
+    width: 550px;
+    height: 375px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    background-color: #B45C0A;
+    box-shadow: 0px 0px 5px 2px rgb(66, 66, 66);
+    border-radius: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* ----------------- info part ----------------- */
+
+.metronome_info_container{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.bpm_contoller{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bpm_contoller .more{
+    color: rgb(37, 192, 37);
+    transform: rotate(270deg);
 }
+
+.bpm_contoller .less{
+    color: rgb(207, 43, 38);
+    transform: rotate(90deg);
+}
+
+.tempo_info{
+    flex-grow: 3;
+    height: 100%;
+    margin: 0 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #C4C4C4;
+    border-radius: 30px;
+}
+
+.tempo_info h2{
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.tempo_info p{
+    font-size: 6.5rem;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+.rythme_info{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.rythme_info .temps_container, .rythme_info .mesures_container{
+    width: 100%;
+    padding: 15px 15px; 
+    background-color: #C4C4C4;
+    border-radius: 30px;
+}
+
+.temps_container h2, .mesures_container h2{
+    font-weight: 500;
+}
+
+.temps_container p, .mesures_container p{
+    font-size: 1.5rem;
+}
+
+/* --------------------------------------------- */
+
+/* -------------- controller part -------------- */
+
+.metronome_controller_container{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn{
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+    border-radius: 100px;
+}
+
+.metronome_container .start{
+    color: rgb(37, 192, 37);
+}
+
+.metronome_container .pause{
+    color: rgb(207, 43, 38);
+}
+
+.metronome_container .reset{
+    color: rgb(207, 43, 38);
+}
+
+/* --------------------------------------------- */
